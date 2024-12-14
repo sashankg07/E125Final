@@ -9,19 +9,20 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #c3c3c3, #f4f4f9);
+            background: linear-gradient(to bottom, #fefefe, #e0e0e0);
             color: #333;
+            text-align: left;
         }
         header {
-            background-color: #4a4a4a;
-            color: white;
-            padding: 1.5rem;
+            background-color: #2c3e50;
+            color: #dff5f1;
+            padding: 2rem;
             text-align: center;
             border-radius: 0 0 15px 15px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
         nav {
-            background-color: #5e7463;
+            background-color: #2c3e50;
             padding: 1rem;
             border-radius: 15px;
             margin: 1rem auto;
@@ -34,37 +35,51 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         nav ul li {
             margin: 0;
         }
         nav ul li a {
-            color: white;
             text-decoration: none;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
         }
-        nav ul li a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
+        nav ul li button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li button:hover {
+            background-color: #34495e;
         }
         main {
             padding: 2rem;
             max-width: 800px;
             margin: auto;
-            background-color: #e6e9e6;
+            background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
         }
         section {
             margin-bottom: 2rem;
         }
-        h1, h2 {
-            color: #5e7463;
+        section p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        ul {
+            padding-left: 1.5rem;
+            list-style: disc;
         }
         .quiz {
-            background-color: #dfdfea;
+            background-color: #f9f9f9;
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -74,21 +89,22 @@
             margin: 1rem 0 0.5rem;
         }
         .quiz button {
-            background-color: #5e7463;
+            background-color: #2c3e50;
             color: white;
             padding: 0.7rem 1.5rem;
             border: none;
-            border-radius: 8px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
         .quiz button:hover {
-            background-color: #4a5e51;
+            background-color: #34495e;
         }
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #5e7463;
+            background-color: #2c3e50;
             color: white;
             border-radius: 15px 15px 0 0;
             margin-top: 2rem;
@@ -112,18 +128,16 @@
     
     <nav>
         <ul>
-            <li><a href="#purpose">Purpose</a></li>
-            <li><a href="#why">Why This Matters</a></li>
-            <li><a href="#scope">Scope of the Problem</a></li>
-            <li><a href="#solutions">What Can Be Done</a></li>
-            <li><a href="#stories">Success Stories</a></li>
-            <li><a href="#quiz">Quiz</a></li>
+            <li><button onclick="location.href='#purpose'">Purpose</button></li>
+            <li><button onclick="location.href='#why'">Why This Matters</button></li>
+            <li><button onclick="location.href='#scope'">Scope of the Problem</button></li>
+            <li><button onclick="location.href='#solutions'">What Can Be Done</button></li>
+            <li><button onclick="location.href='#anecdote'">Personal Anecdote</button></li>
+            <li><button onclick="location.href='#quiz'">Quiz</button></li>
         </ul>
     </nav>
     <main>
-        <div class="image-container">
-            <img src="library.jpg" alt="Educational Technology Illustration">
-        </div>
+
         <section id="purpose">
             <h2>Purpose</h2>
             <p>The purpose of this website is to raise awareness about the importance of educational equity and the role of technology in bridging gaps in access. By providing information and resources, we aim to empower individuals, communities, and organizations to take meaningful action toward creating a more inclusive and equitable educational environment.</p>
@@ -148,9 +162,10 @@
                 <li>Advocating for policies that prioritize digital inclusion.</li>
             </ul>
         </section>
-        <section id="stories">
-            <h2>Success Stories</h2>
-            <p>Programs such as the "ConnectED Initiative" in the U.S. have shown that targeted investments in broadband infrastructure and digital tools can significantly improve student outcomes. Similarly, grassroots organizations in developing countries have leveraged low-cost technologies, such as solar-powered tablets, to bring education to remote regions.</p>
+        
+        <section id="anecdote">
+            <h2>Personal Anecdote</h2>
+            <p>Before pursuing a career in technology, I was on a pre-medicine path, working closely with individuals ranging from special needs children to geriatric patients. I saw firsthand how education could transform lives, empowering individuals to overcome challenges and boosting their overall quality of life. These experiences solidified my belief in the power of accessible education as a tool for equality and opportunity.</p>
         </section>
         <section id="quiz" class="quiz">
             <h2>Take the Quiz</h2>
