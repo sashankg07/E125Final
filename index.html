@@ -64,7 +64,13 @@
             border-radius: 15px;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
         }
-        h1, h2 {
+        h1, h4 {
+            text-align: center;
+            color: white;
+
+        }
+        
+        h2 {
             text-align: center;
         }
         section {
@@ -79,16 +85,19 @@
             list-style: disc;
         }
         .quiz {
+            text-align: center;
             background-color: #f9f9f9;
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
         .quiz label {
+            text-align: center;
             display: block;
             margin: 1rem 0 0.5rem;
         }
         .quiz button {
+            text-align: center;
             background-color: #2c3e50;
             color: white;
             padding: 0.7rem 1.5rem;
@@ -99,6 +108,7 @@
             transition: background-color 0.3s ease;
         }
         .quiz button:hover {
+            text-align: center;
             background-color: #34495e;
         }
         footer {
@@ -124,6 +134,8 @@
 <body>
     <header>
         <h1>Educational Equity and Access to Technology</h1>
+        <hr>
+        <h4>Sashank Gadisetti, E125 Final</h4>
     </header>
     
     <nav>
@@ -137,22 +149,35 @@
         </ul>
     </nav>
     <main>
+        <div class="image-container">
+            <img src="library.jpg" alt="Educational Technology Illustration">
+        </div>
+        <hr>
 
         <section id="purpose">
-            <h2>Purpose</h2>
+            <h2>Purpose Of This Website</h2>
             <p>The purpose of this website is to raise awareness about the importance of educational equity and the role of technology in bridging gaps in access. By providing information and resources, we aim to empower individuals, communities, and organizations to take meaningful action toward creating a more inclusive and equitable educational environment.</p>
         </section>
+
+        <hr>
+
         <section id="why">
-            <h2>Why This Matters</h2>
+            <h2>Why Does Education Matter?</h2>
             <p>Access to technology is no longer a luxury—it’s a necessity. In today’s world, a lack of access to digital resources perpetuates inequities in education, especially for students in underserved communities. This gap, often called the digital divide, can hinder opportunities and reinforce systemic barriers.</p>
         </section>
+        
+        <hr>
+
         <section id="scope">
-            <h2>The Scope of the Problem</h2>
+            <h2>What Is The Problem?</h2>
             <p>Studies indicate that approximately 20% of K-12 students in the United States lack reliable internet access at home, often referred to as the "homework gap." This disparity disproportionately affects rural areas and low-income communities, limiting students' ability to complete assignments, attend virtual classes, or access educational resources.</p>
             <p>Globally, the problem is even more pronounced. According to UNICEF, two-thirds of the world’s school-age children lack access to the internet at home, further widening the gap in educational outcomes between developed and developing regions.</p>
         </section>
+
+        <hr>
+
         <section id="solutions">
-            <h2>What Can Be Done?</h2>
+            <h2>What Can We Do?</h2>
             <p>To promote equity, we need collaborative efforts from educators, policymakers, and technologists. This involves: </p>
             <ul>
                 <li>Providing affordable internet access.</li>
@@ -162,14 +187,17 @@
                 <li>Advocating for policies that prioritize digital inclusion.</li>
             </ul>
         </section>
+
+        <hr>
         
         <section id="anecdote">
-            <h2>Personal Anecdote</h2>
+            <h2>My Experiences In The Medical Field</h2>
             <p>Before pursuing a career in technology, I was on a pre-medicine path, working closely with individuals ranging from special needs children to geriatric patients. I saw firsthand how education could transform lives, empowering individuals to overcome challenges and boosting their overall quality of life. These experiences solidified my belief in the power of accessible education as a tool for equality and opportunity.</p>
         </section>
         <section id="quiz" class="quiz">
-            <h2>Take the Quiz</h2>
+            <h2>QUIZ TIME!</h2>
             <p>Test your knowledge about educational equity and technology:</p>
+            <hr>
             <form id="quiz-form">
                 <label for="q1">1. What percentage of K-12 students lack access to the internet at home?</label>
                 <select id="q1" name="q1">
@@ -193,7 +221,7 @@
                     <option value="Device donations">Device donations</option>
                     <option value="Faster internet">Faster internet</option>
                 </select>
-
+                <br><hr>
                 <button type="button" onclick="checkAnswers()">Submit</button>
             </form>
             <p id="result"></p>
