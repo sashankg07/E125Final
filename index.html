@@ -12,6 +12,9 @@
             background: linear-gradient(to bottom, #ffffff, #f3f4f6);
             color: #333;
         }
+        p {
+            margin: 1rem
+        }
         header {
             background-color: #0077b6;
             color: white;
@@ -20,13 +23,13 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         }
         main {
-            padding: 2rem;
+            padding: 1rem;
             max-width: 900px;
             margin: auto;
             line-height: 1.8;
         }
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             display: none;
         }
         section.active {
@@ -38,7 +41,7 @@
             to { opacity: 1; }
         }
         .quiz {
-            margin-top: 1rem;
+            margin-top: 0rem;
             background-color: #e3f2fd;
             padding: 1.5rem;
             border-radius: 8px;
@@ -51,8 +54,9 @@
             padding: 0.7rem 1.2rem;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 0.5rem;
+            margin: 0.5rem;
             transition: background-color 0.3s;
+            margin-top: 1.5rem;
         }
         .quiz button:hover {
             background-color: #005f73;
@@ -85,6 +89,10 @@
         #view-all-btn:hover {
             background-color: #218838;
         }
+        label {
+            padding-left: 2rem;
+        
+        }
     </style>
 </head>
 <body>
@@ -92,9 +100,31 @@
         <h1>AI Training for Non Technical Individuals</h1>
     </header>
     <main>
-        <section id="how-ai-works" class="active">
+        <section id="begin" class="active">
+            <h2>AI Training Course</h2>
+            <h4>Why should you learn about AI as a non-technincal individual?</h4>
+            <p>As AI becomes a central part of our lives, it’s crucial for everyone, not just technical experts, to understand its impact and ethical challenges. AI systems influence decisions about our data, opportunities, and well-being, making issues like bias, transparency, and privacy deeply relevant. For non-technical individuals, learning about AI empowers more and more people to ask questions. This in turn is able to hold people accountable for the actions of AI. It also helps us as users of the technology to ensure they are applied fairly and ethically. With our growing reliance on AI in areas like healthcare, education, and criminal justice etc., understanding its strengths and limitations helps us use it responsibly. By learning about the ethics of AI, non-technical individuals are able to play a very important role in how these systems change in the future. Awareness is essential for building a future where AI enhances society without compromising fairness, privacy, or trust.</p>
+            
+            <div class="quiz">
+                <p><strong>Ready to begin?</strong> </p>
+                <label><input type="radio" name="begin" value="correct"> Yes!</label><br>
+                <button onclick="validateQuiz('begin', 'how-ai-works')">Submit</button>
+            </div>
+        </section>
+        <section id="how-ai-works" >
             <h2>How AI Works</h2>
+            
             <p>Artificial Intelligence uses data analysis and complex algorithms to mimic human intelligence. Machine Learning (ML) uses large sets of data to make predictions about the future based off of the past.</p>
+            
+            <p>AI works by taking in data, processing it, and producing useful outputs based on patterns it identifies. It relies on models to do this, which are mathematical systems that aid in recognizing patterns and making predictions. These models are "trained" using large datasets, where the model learns from the data. The accuracy usually improves over time with better features and more data. A training dataset can contain thousands of labeled images to teach an AI to recognize certain objects.</p>
+
+            <p>There are different types of models. Some include supervised models (learn from labeled data), unsupervised models (find patterns in unlabeled data), and reinforcement learning models (learn through trial and error). </p>
+                
+            <p>Understanding training process is key for making decisions about AI. If the data going in is biased or incomplete, the output can be unfair or incorrect. Non-technical individuals can critically assess how AI systems work and ensure their use aligns with ethical principles like fairness, accountability, and transparency.</p>
+                
+            <p>Source: IBM, “How AI Works: Basics for Beginners,” IBM Research. [Online]. Available: https://www.ibm.com/topics/artificial-intelligence. [Accessed: 13-Dec-2024].            </p>
+            
+            
             <p>Key technologies used in this field:</p>
             <ul>
                 <li><strong>Data Processing:</strong> Algorithms process unstructured and structured data to make predictions.</li>
@@ -103,22 +133,27 @@
             </ul>
             <div class="quiz">
                 <p><strong>Quiz:</strong> What allows AI systems to learn from data?</p>
+                <label><input type="radio" name="how-ai-works" value="incorrect"> Lots of data</label><br>
                 <label><input type="radio" name="how-ai-works" value="correct"> Machine Learning</label><br>
                 <label><input type="radio" name="how-ai-works" value="incorrect"> Data Storage</label><br>
+                <label><input type="radio" name="how-ai-works" value="incorrect"> Computers</label><br>
                 <button onclick="validateQuiz('how-ai-works', 'bias')">Submit</button>
             </div>
         </section>
         <section id="bias">
             <h2>Bias in AI</h2>
             <p>The data incorperated into an AI/ML system is the most important part of the process. If biased/poor quality data is input into the model, it will also output such results.</p>
-            <p>To address bias:</p>
+            <p>Bias in AI happens when the data used to train an AI system isn’t representative or when the algorithms themselves reinforce unfair patterns. For example, facial recognition systems often misidentify individuals from certain racial or ethnic groups because the training data didn’t include enough diversity. These biases aren’t just technical problems—they have real-world consequences, like reinforcing discrimination in hiring or law enforcement decisions. Addressing bias starts with ensuring datasets are diverse and reflect the people and situations the AI will interact with. It also involves building systems to detect and correct bias during the development process. Regular audits and feedback from diverse perspectives can help make AI systems more fair and inclusive. Ultimately, it’s on developers and decision-makers to prioritize ethical standards so AI works for everyone, not just a subset of people. To deal with this bias:</p>
             <ul>
                 <li>Use diverse datasets and large datasets to account for bias.</li>
                 <li>Regularly audit AI systems and results.</li>
                 <li>Make sure multiple perspectives are considered when developing the systems.</li>
             </ul>
+            <p>Source: J. Manyika et al., “What Do We Do About the Biases in AI?,” McKinsey & Company. [Online]. Available: https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights. [Accessed: 13-Dec-2024].</p>
             <div class="quiz">
                 <p><strong>Quiz:</strong> How can bias in AI be mitigated?</p>
+                <label><input type="radio" name="bias" value="incorrect"> Increase computation efficiency</label><br>
+                <label><input type="radio" name="bias" value="incorrect"> Use more specific and narrow datasets</label><br>
                 <label><input type="radio" name="bias" value="correct"> Use diverse datasets</label><br>
                 <label><input type="radio" name="bias" value="incorrect"> Increase computation speed</label><br>
                 <button onclick="validateQuiz('bias', 'transparency')">Submit</button>
@@ -127,16 +162,23 @@
         <section id="transparency">
             <h2>Transparency and Interpretability</h2>
             <p>Transparency in AI is the ability to clearly explaining how systems make decisions. Interpretability is the concept that people can understand the reasoning behind AI-driven outcomes.</p>
+            <p>Transparency and interpretability are critical for building trust in AI models that are used everyday. Transparency would mean being clear about how AI are designed, the data they use for training, and the method in which they make decisions. Interpretability is taking a step further, this aspect focuses on making the models decision process understandable to users. For example, in healthcare, if an AI recommends a treatment, doctors need to understand why it reached that conclusion to ensure it’s reliable and appropriate for the patient. Without transparency and interpretability, AI systems are refered to as black boxes, meaning it would be very hard to trust their outcomes and identify potential errors. We can ensure that AI systems are accountable and aligned with human values with these attributes.
+
             <p>Benefits of transparency:</p>
             <ul>
                 <li>Building trust in AI.</li>
                 <li>Maintaining accountability for decisions of AI.</li>
                 <li>Helping people identify and address issues.</li>
             </ul>
+            <p>                Source: A. Rai, “Explainable AI: From Black Box to Glass Box,” Journal of the Academy of Marketing Science, vol. 48, no. 1, pp. 137–141, 2020. [Online]. Available: https://doi.org/10.1007/s11747-019-00711-0. [Accessed: 13-Dec-2024].</p>
+
+
             <div class="quiz">
                 <p><strong>Quiz:</strong> Why is transparency important in AI?</p>
                 <label><input type="radio" name="transparency" value="correct"> To build trust and accountability</label><br>
                 <label><input type="radio" name="transparency" value="incorrect"> To reduce processing time</label><br>
+                <label><input type="radio" name="transparency" value="incorrect"> To reveal business functions</label><br>
+                <label><input type="radio" name="transparency" value="incorrect"> To increase user accountability</label><br>
                 <button onclick="validateQuiz('transparency', 'overdependence')">Submit</button>
             </div>
         </section>
@@ -151,22 +193,30 @@
             </ul>
             <div class="quiz">
                 <p><strong>Quiz:</strong> How can overdependence on AI be avoided?</p>
-                <label><input type="radio" name="overdependence" value="correct"> Validate AI outcomes with human oversight</label><br>
                 <label><input type="radio" name="overdependence" value="incorrect"> Fully automate all decisions</label><br>
+                <label><input type="radio" name="overdependence" value="incorrect"> Fully automate half the decisions</label><br>
+                <label><input type="radio" name="overdependence" value="incorrect"> Don't use AI</label><br>
+                <label><input type="radio" name="overdependence" value="correct"> Validate AI outcomes with human oversight</label><br>
+                
                 <button onclick="validateQuiz('overdependence', 'privacy')">Submit</button>
             </div>
         </section>
         <section id="privacy">
             <h2>Privacy and AI</h2>
-            <p>AI systems process large amounts of data, sometimes sensitive. It is crucial that individuals are compliant with the same privacy standards that they would otherwise, such as HIPPA or other confidentiality agreements.</p>
+            <p>AI systems process large amounts of data, sometimes sensitive. It is crucial that individuals are compliant with the same privacy standards that they would otherwise, such as HIPPA or other confidentiality agreements. Privacy is a very important concern with AI, as it needs a large amount of data to work well. It might include health records, financial details, web habits and location history. Without good protections, this data might get misused or accessed without permission. For example, AI in healthcare must handle patient information carefully. These systems need to follow rules like HIPAA and GDPR to keep data safe.
+
+                AI systems need strong security to protect privacy. Encryption and anonymization are very important. Limiting access to sensitive data is crucial too. People should know how their data gets collected and used. Giving individuals control over their data is key. They should be able to opt out of sharing or delete their records. This can really help build trust in AI systems.</p>
             <p>Strategies for protecting privacy:</p>
             <ul>
                 <li>Encrypt sensitive data.</li>
                 <li>Limit access to personal data.</li>
                 <li>Implement data anonymization techniques.</li>
             </ul>
+            <p>Source: K. Crawford and R. Calo, “There Is a Blind Spot in AI Research,” Nature, vol. 538, no. 7625, pp. 311–313, 2016. [Online]. Available: https://doi.org/10.1038/538311a. [Accessed: 13-Dec-2024].</p>
             <div class="quiz">
                 <p><strong>Quiz:</strong> What is a major privacy concern in AI?</p>
+                <label><input type="radio" name="privacy" value="incorrect"> Sheer size of data</label><br>
+                <label><input type="radio" name="privacy" value="incorrect"> Database Security</label><br>
                 <label><input type="radio" name="privacy" value="correct"> Unauthorized use of personal data</label><br>
                 <label><input type="radio" name="privacy" value="incorrect"> Lack of dataset size</label><br>
                 <button onclick="validateQuiz('privacy', 'view-all')">Submit</button>
