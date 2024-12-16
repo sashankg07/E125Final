@@ -1,160 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Training for Non-Technical Individuals</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #F3E5F5;
-            color: #333;
-        }
-        header, footer {
-            background-color: #4A148C;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-        }
-        main {
-            padding: 1rem;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.8;
-        }
-        section {
-            margin-bottom: 2rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-        }
-        section img {
-            width: 20%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        .quiz {
-            background-color: #FFFFFF;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            padding: 2rem;
-        }
-        .quiz button {
-            background-color: #FB8C00;
-            color: white;
-            border: none;
-            padding: 0.7rem 1.2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-top: 1rem;
-        }
-        .quiz button:hover {
-            background-color: #E65100;
-        }
-        footer {
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Without Bias: Training and Simmulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #3f51b5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #3f51b5;
+    }
+    .button {
+      display: inline-block;
+      background-color: #3f51b5;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #303f9f;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #e3f2fd;
+      border: 1px solid #bbdefb;
+    }
+    .chart-container {
+      margin: 20px 0;
+    }
+    canvas {
+      max-width: 100%;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #3f51b5;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AI Training For Dummies</h1>
-    </header>
-    <main>
-        <!-- Sections -->
-        <section>
-            <img src="dummy.jpg" alt="AI Image">
-            <h2>Why Learn About AI?</h2>
-            <p>As AI becomes a central part of our lives, it’s crucial for everyone, not just technical experts, to understand its impact and ethical challenges. AI systems influence decisions about our data, opportunities, and well-being, making issues like bias, transparency, and privacy deeply relevant. For non-technical individuals, learning about AI empowers more and more people to ask questions. This in turn is able to hold people accountable for the actions of AI. It also helps us as users of the technology to ensure they are applied fairly and ethically. With our growing reliance on AI in areas like healthcare, education, and criminal justice etc., understanding its strengths and limitations helps us use it responsibly. By learning about the ethics of AI, non-technical individuals are able to play a very important role in how these systems change in the future. Awareness is essential for building a future where AI enhances society without compromising fairness, privacy, or trust.</p>
-        </section>
-        <section>
-            <img src="gears.jpg" alt="How AI Works">
-            <h2>How AI Works</h2>
-            <p>Artificial Intelligence uses data analysis and complex algorithms to mimic human intelligence. Machine Learning (ML) uses large sets of data to make predictions about the future based off of the past. AI works by taking in data, processing it, and producing useful outputs based on patterns it identifies. It relies on models to do this, which are mathematical systems that aid in recognizing patterns and making predictions. These models are "trained" using large datasets, where the model learns from the data. The accuracy usually improves over time with better features and more data. A training dataset can contain thousands of labeled images to teach an AI to recognize certain objects.</p>
-            <p>There are different types of models. Some include supervised models (learn from labeled data), unsupervised models (find patterns in unlabeled data), and reinforcement learning models (learn through trial and error).</p>
-            <p>Key technologies used in this field:</p>
-            <ul>
-                <li><strong>Data Processing:</strong> Algorithms process unstructured and structured data to make predictions.</li>
-                <li><strong>Neural Networks:</strong> This is a subset of ML that is modeled after the human brain.</li>
-                <li><strong>Natural Language Processing (NLP):</strong> This is a subset of AI that powers Chatbots and other language-based prediction.</li>
-            </ul>
-        </section>
-        <section>
-            <img src="bias.png" alt="Bias in AI">
-            <h2>Bias in AI</h2>
-            <p>The data incorporated into an AI/ML system is the most important part of the process. If biased/poor-quality data is input into the model, it will also output such results. Bias in AI happens when the data used to train an AI system isn’t representative or when the algorithms themselves reinforce unfair patterns. For example, facial recognition systems often misidentify individuals from certain racial or ethnic groups because the training data didn’t include enough diversity. These biases aren’t just technical problems—they have real-world consequences, like reinforcing discrimination in hiring or law enforcement decisions. Addressing bias starts with ensuring datasets are diverse and reflect the people and situations the AI will interact with. It also involves building systems to detect and correct bias during the development process. Regular audits and feedback from diverse perspectives can help make AI systems more fair and inclusive. Ultimately, it’s on developers and decision-makers to prioritize ethical standards so AI works for everyone, not just a subset of people.</p>
-        </section>
-        <section>
-            <img src="globe.png" alt="Transparency in AI">
-            <h2>Transparency and Interpretability</h2>
-            <p>Transparency in AI is the ability to clearly explain how systems make decisions. Interpretability is the concept that people can understand the reasoning behind AI-driven outcomes. Transparency and interpretability are critical for building trust in AI models that are used every day. Transparency means being clear about how AI is designed, the data it uses for training, and the methods it uses to make decisions. Interpretability focuses on making the model's decision process understandable to users. For example, in healthcare, if an AI recommends a treatment, doctors need to understand why it reached that conclusion to ensure it’s reliable and appropriate for the patient. Without transparency and interpretability, AI systems are referred to as black boxes, making it very hard to trust their outcomes and identify potential errors. Transparency and interpretability ensure that AI systems are accountable and aligned with human values.</p>
-        </section>
-        <section>
-            <img src="lcok.png" alt="Privacy in AI">
-            <h2>Privacy and AI</h2>
-            <p>AI systems process large amounts of data, sometimes sensitive. It is crucial that individuals are compliant with the same privacy standards that they would otherwise, such as HIPAA or other confidentiality agreements. Privacy is a very important concern with AI, as it needs a large amount of data to work well. It might include health records, financial details, web habits, and location history. Without good protections, this data might get misused or accessed without permission. For example, AI in healthcare must handle patient information carefully. These systems need to follow rules like HIPAA and GDPR to keep data safe. AI systems need strong security to protect privacy. Encryption and anonymization are very important. Limiting access to sensitive data is crucial too. People should know how their data gets collected and used. Giving individuals control over their data is key. They should be able to opt out of sharing or delete their records. This can really help build trust in AI systems.</p>
-        </section>
-        <!-- Consolidated Quiz Section -->
-        <section class="quiz">
-            <h2>Quiz: Test Your Knowledge</h2>
-            <form id="quiz-form">
-                <p><strong>1. Why is it important for non-technical individuals to learn about AI?</strong></p>
-                <label><input type="radio" name="question1" value="correct"> To understand its ethical challenges and societal impacts</label><br>
-                <label><input type="radio" name="question1" value="incorrect"> To reduce processing time</label><br>
-                <label><input type="radio" name="question1" value="incorrect"> To reveal business functions</label><br>
-                <label><input type="radio" name="question1" value="incorrect"> To increase user accountability</label><br>
+  <header>
+    <h1>AI Without Bias: Simmulation and Case Studies</h1>
+    <p>Exploring the challenges and solutions to bias in artificial intelligence.</p>
+  </header>
+  <main>
+    <section>
+      <h2>What Is Bias in AI & Why Is It Important?</h2>
+      <p>
+        Bias in AI is the unfair preferential treatment of individuals or groups of poeple because of flaws in the AI systems.
+        It typically stems from historical, societal, or data biases present during the creation of the model and can lead to unintended consequences in decision-making.
+      </p>
+      <p>Bias is a very relavent issue, especially with the growing prelavence of AI. There is a growing need for fairness and accountability in technology. When AI is biased from their training data or algorithms, it risks perpetuating or amplifying societal injustice. Understanding and addressing bias in AI is essential to ensure that these technologies promote inclusivity and ethical decision-making. </p>
+    </section>
 
-                <p><strong>2. What allows AI systems to learn from data?</strong></p>
-                <label><input type="radio" name="question2" value="incorrect"> Lots of data</label><br>
-                <label><input type="radio" name="question2" value="correct"> Machine Learning</label><br>
-                <label><input type="radio" name="question2" value="incorrect"> Data Storage</label><br>
-                <label><input type="radio" name="question2" value="incorrect"> Computers</label><br>
+    
 
-                <p><strong>3. How can bias in AI be mitigated?</strong></p>
-                <label><input type="radio" name="question3" value="incorrect"> Increase computation efficiency</label><br>
-                <label><input type="radio" name="question3" value="correct"> Use diverse datasets</label><br>
-                <label><input type="radio" name="question3" value="incorrect"> Use specific datasets</label><br>
-                <label><input type="radio" name="question3" value="incorrect"> Increase computation speed</label><br>
+    <section>
+      <h2>Interactive Simulation: Bias in Hiring Outcomes</h2>
+      <p>
+        Adjust the bias level and observe its impact on hiring outcomes for candidates of different genders. 
+        Click the button multiple times with different levels of bias and see how easy/hard it is to identify whether the algorithm is biased or not.
+        Play around with the bias level and try again, see what conclusions you can draw from this.
+        <br><br>
+        Keep in mind that this is a simmulation of 100 candidates, with genders assigned randomly (approximately 50% male and 50% female depending on the run). Each candidate has an 80% chance of being "qualified" for hiring. The number of male and female hires is displayed in a bar chart and summary, updating dynamically with each run.
+      </p>
+      <div class="controls">
+        <label for="bias">Bias Level (Middle = Neutral, Either Side = Fully Biased):</label>
+        <input type="range" id="bias" min="0" max="1" step="0.1" value="0.5" />
+      </div>
+      <button class="button" onclick="simulate()">Run Simulation</button>
+      <div class="output" id="output"></div>
+      <div class="chart-container">
+        <canvas id="chart" width="400" height="200"></canvas>
+      </div>
+    </section>
 
-                <p><strong>4. Why is transparency important in AI?</strong></p>
-                <label><input type="radio" name="question4" value="correct"> To build trust and accountability</label><br>
-                <label><input type="radio" name="question4" value="incorrect"> To reduce processing time</label><br>
-                <label><input type="radio" name="question4" value="incorrect"> To reveal business functions</label><br>
-                <label><input type="radio" name="question4" value="incorrect"> To increase user accountability</label><br>
+    
 
-                <p><strong>5. What is a major privacy concern in AI?</strong></p>
-                <label><input type="radio" name="question5" value="incorrect"> Sheer size of data</label><br>
-                <label><input type="radio" name="question5" value="correct"> Unauthorized use of personal data</label><br>
-                <label><input type="radio" name="question5" value="incorrect"> Database Security</label><br>
-                <label><input type="radio" name="question5" value="incorrect"> Lack of dataset size</label><br>
+    <table border="1" style="border-collapse: collapse; width: 100%; text-align: left;">
+        <thead>
+          <tr style="background-color: #f4f4f9;">
+            <th style="padding: 10px;">Key Takeaway</th>
+            <th style="padding: 10px;">Explanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px;"><strong>Bias Is Hard to Detect Without Iteration</strong></td>
+            <td style="padding: 10px;">Small shifts in bias are difficult to identify without running the algorithm over multiple cycles. Patterns only emerge when outcomes are analyzed over time, requiring repeated audits and statistical analysis.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px;"><strong>Complexity of Variables</strong></td>
+            <td style="padding: 10px;">Results depend on many factors, such as the proportion of qualified candidates, the total number of candidates, and hiring thresholds. These variables interact with bias, complicating its detection.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px;"><strong>Cumulative Impact of Small Biases</strong></td>
+            <td style="padding: 10px;">Even minor biases in decision-making can compound over time, leading to significant disparities after many iterations.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px;"><strong>Interplay of Proxy Variables</strong></td>
+            <td style="padding: 10px;">Variables like experience, education, or hobbies can act as proxies for sensitive attributes, making it harder to see how bias affects outcomes.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px;"><strong>Real-World Implications</strong></td>
+            <td style="padding: 10px;">This simulation reflects how unchecked hiring algorithms can unintentionally reinforce systemic inequalities, highlighting the importance of regular auditing and bias mitigation strategies.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <section>
+        <h2>Case Studies</h2>
+        <h3>Case Study 1: COMPAS Risk Assessment</h3>
+        <p>
+          The COMPAS tool, in the past, was used in the criminal justice system. It was found to disproportionately rate African-American defendants as having a higher risk of reoffending when compared to white defendants. 
+          This bias was caused by to historical data and societal inequalities that the model was trained on.
+          <br><br>
+          The COMPAS (Correctional Offender Management Profiling for Alternative Sanctions) tool was intended to predict a defendant’s likelihood of reoffending. It, however, became a glaring example of how algorithmic bias can unintentionally reinforce systemic inequities. A 2016 ProPublica investigation revealed that the algorithm disproportionately flagged Black defendants as high risk nearly twice as often as white defendants who had similar records and outcomes. In addition, white defendants were more likely to be incorrectly labeled as low risk, even when they later reoffended.
+  <br><br>
+  The data used to train COMPAS was the root of the problem. The system relied on historical criminal justice data which had racial disparities, such as over-policing in predominantly Black communities. Since arrests were treated as a key input, the algorithm unintentionally learned to replicate the same systemic biases embedded in that data.
+  <br>
+  <br>
+  This bias had very real and severe consequences. Judges used COMPAS to inform decisions about bail, parole, and sentencing. They often placed undue burdens on Black defendants labeled as high risk. These decisions could lead to longer sentences, fewer opportunities for rehabilitation, and cycles of incarceration that perpetuated inequality. The case illustrates how bias can creep into systems designed with good intentions, leading to unintentional but devastating outcomes.
+  <br>
+  <br>
+  Preventing such biases requires a more deliberate approach to data selection, ensuring it is representative and free of bias. Algorithms should be rigorously tested for disparities in their outputs, and their decision-making processes should be transparent to all stakeholders. 
+  <br>
+  <br>
+  Source: Angwin, Julia, et al. "Machine Bias." ProPublica, May 23, 2016, https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing.
+  
+        </p>
+        <h3>Case Study 2: Gender Bias in Hiring</h3>
+        <p>
+          A hiring algorithm used by a major tech company was found to perpetuated gender inequality in hiring practices.
+          <br><br>
+          This algorithm became a textbook example of how bias in AI can unintentionally perpetuate inequality. It was designed to automate the recruitment process, however, the algorithm downgraded resumes from women while favoring those from men, even when qualifications were very similar. This wasn’t an intentional bias, however, it was caused by the algorithm’s training data, which reflected the company’s historical hiring patterns. Because men have been overwhelmingly hired for technical roles in the past, the system learned to associate male-dominated language and experiences with stronger candidates.
+  
+          <br><br>For example, resumes that mentioned participation in women’s organizations were penalized, while those featuring male-coded activities were more likely to be recommended. Qualified women were less likely to  get interviews. The algorithm reinforced stereotypes about who belongs in tech and slowed progress toward creating more diverse, inclusive workplaces.
+  
+          <br><br>This case shows how easily bias can creep into AI systems when historical inequalities go unchecked. Preventing this requires more than good intentions. Training data must be balanced and representative, algorithms need to be audited for fairness, and systems should include feedback loops to catch and correct biases early.
+  
+          <br><br>Source: Dastin, Jeffrey. "Amazon Scraps Secret AI Recruiting Tool That Showed Bias Against Women." Reuters, October 10, 2018, https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G.
+        </p>
+      </section>
+    <section>
+      <h2>How to Prevent Bias in AI</h2>
+      <ul>
+        <li><strong>Diverse Datasets:</strong> Ensure training datasets represent all demographics fairly.</li>
+        <li><strong>Algorithm Auditing:</strong> Regularly audit algorithms for unintended biases.</li>
+        <li><strong>Human Oversight:</strong> Involve ethicists and diverse stakeholders in AI development.</li>
+        <li><strong>Transparency:</strong> Clearly document data sources and decision-making processes.</li>
+      </ul>
+      <p>Preventing bias in AI begins with acknowledging that bias exists and understanding its potential impact. Recognizing the problem allows developers and stakeholders to approach AI design with intention and care. To mitigate bias, it’s essential to use diverse and representative datasets, audit algorithms regularly for fairness, and involve multidisciplinary teams in development.</p>
+    </section>
+  </main>
 
-                <button type="button" onclick="gradeQuiz()">Submit Answers</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; Sashank Gadisetti AI Training Prototype</p>
-    </footer>
-    <script>
-        function gradeQuiz() {
-            const answers = document.querySelectorAll('input[type="radio"]:checked');
-            let correctAnswers = 0;
+  <footer>
+    <p>© 2024 Sashank Gadisetti E125 Prototype. All Rights Reserved.</p>
+  </footer>
 
-            answers.forEach(answer => {
-                if (answer.value === "correct") {
-                    correctAnswers++;
-                }
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    let chart; // Variable to store the chart instance
+    const candidates = generateCandidates(100); // Generate candidates once
+
+    function generateCandidates(number) {
+        const candidates = [];
+        for (let i = 0; i < number; i++) {
+            candidates.push({
+                name: `Candidate ${i + 1}`,
+                gender: Math.random() > 0.5 ? 'Male' : 'Female',
+                qualified: Math.random() > 0.2, // 80% chance of being qualified
             });
-
-            alert(`You scored ${correctAnswers} out of 5!`);
         }
-    </script>
+        return candidates;
+    }
+
+    function simulate() {
+        const bias = parseFloat(document.getElementById('bias').value);
+        const results = { Male: 0, Female: 0 };
+
+        candidates.forEach(candidate => {
+            const random = Math.random();
+            if (candidate.qualified) {
+                const biasFactor = candidate.gender === 'Male' ? bias : 1 - bias;
+                if (random < biasFactor) {
+                    results[candidate.gender]++;
+                }
+            }
+        });
+
+        updateOutput(results);
+        updateChart(results);
+    }
+
+    function updateOutput(results) {
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+          <p><strong>Simulation Results:</strong></p>
+          <p>Male Candidates Hired: ${results.Male}</p>
+          <p>Female Candidates Hired: ${results.Female}</p>
+        `;
+    }
+
+    function updateChart(results) {
+        const ctx = document.getElementById('chart').getContext('2d');
+
+        // Destroy the existing chart instance if it exists
+        if (chart) {
+            chart.destroy();
+        }
+
+        // Create a new chart instance
+        chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Male', 'Female'],
+                datasets: [
+                    {
+                        label: 'Candidates Hired',
+                        data: [results.Male, results.Female],
+                        backgroundColor: ['#3f51b5', '#ff5722'],
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true },
+                },
+            },
+        });
+    }
+  </script>
 </body>
 </html>
